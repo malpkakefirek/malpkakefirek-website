@@ -2,154 +2,154 @@
     "0": {
         "title": "Project 1",
         "description": "This is project 1",
-        "tags": ["webdev", "tag2"],
+        "tags": ["webdev", "javascript", "OOP"],
         "images": [],
         "videos": []
-    },
-    "1": {
+        },
+        "1": {
         "title": "Project 2",
         "description": "This is project 2",
-        "tags": ["tag2", "tag3"],
+        "tags": ["database", "python"],
         "images": [],
         "videos": []
-    },
-    "2": {
+        },
+        "2": {
         "title": "Project 3",
         "description": "This is project 3",
-        "tags": ["tag1", "tag3"],
+        "tags": ["AI", "python", "database"],
         "images": [],
         "videos": []
-    },
-    "3": {
+        },
+        "3": {
         "title": "Project 4",
         "description": "This is project 4",
-        "tags": ["tag2", "tag4"],
+        "tags": ["game-dev", "Unity"],
         "images": [],
         "videos": []
-    },
-    "4": {
+        },
+        "4": {
         "title": "Project 5",
         "description": "This is project 5",
-        "tags": ["tag1", "tag5", "tag2"],
+        "tags": ["webdev", "Svelte", "javascript", "PHP"],
         "images": [],
         "videos": []
-    },
-    "5": {
+        },
+        "5": {
         "title": "Project 6",
         "description": "This is project 6",
-        "tags": ["tag3", "tag4", "tag2"],
+        "tags": ["networking", "c++", "OOP"],
         "images": [],
         "videos": []
-    },
-    "6": {
+        },
+        "6": {
         "title": "Project 7",
         "description": "This is project 7",
-        "tags": ["tag2", "tag5"],
+        "tags": ["AI", "java"],
         "images": [],
         "videos": []
-    },
-    "7": {
+        },
+        "7": {
         "title": "Project 8",
         "description": "This is project 8",
-        "tags": ["tag1", "tag4", "tag2"],
+        "tags": ["database", "PostgreSQL", "Flask"],
         "images": [],
         "videos": []
-    },
-    "8": {
+        },
+        "8": {
         "title": "Project 9",
         "description": "This is project 9",
-        "tags": ["tag3", "tag5", "tag2"],
+        "tags": ["webdev", "javascript", "PHP"],
         "images": [],
         "videos": []
-    },
-    "9": {
+        },
+        "9": {
         "title": "Project 10",
         "description": "This is project 10",
-        "tags": ["tag2", "tag3"],
+        "tags": ["networking", "c#", "OOP"],
         "images": [],
         "videos": []
-    },
-    "10": {
+        },
+        "10": {
         "title": "Project 11",
         "description": "This is project 11",
-        "tags": ["tag1", "tag2"],
+        "tags": ["AI", "python", "database"],
         "images": [],
         "videos": []
-    },
-    "11": {
+        },
+        "11": {
         "title": "Project 12",
         "description": "This is project 12",
-        "tags": ["tag4", "tag5", "tag2"],
+        "tags": ["game-dev", "Unity", "c++"],
         "images": [],
         "videos": []
-    },
-    "12": {
+        },
+        "12": {
         "title": "Project 13",
         "description": "This is project 13",
-        "tags": ["tag1", "tag3", "tag2"],
+        "tags": ["webdev", "Svelte"],
         "images": [],
         "videos": []
-    },
-    "13": {
+        },
+        "13": {
         "title": "Project 14",
         "description": "This is project 14",
-        "tags": ["tag2", "tag4"],
+        "tags": ["database", "PostgreSQL", "Flask", "python"],
         "images": [],
         "videos": []
-    },
-    "14": {
+        },
+        "14": {
         "title": "Project 15",
         "description": "This is project 15",
-        "tags": ["tag2", "tag5"],
+        "tags": ["webdev"],
         "images": [],
         "videos": []
-    },
-    "15": {
+        },
+        "15": {
         "title": "Project 16",
         "description": "This is project 16",
-        "tags": ["tag2", "tag4"],
+        "tags": ["game-dev", "Unity"],
         "images": [],
         "videos": []
-    },
-    "16": {
+        },
+        "16": {
         "title": "Project 17",
         "description": "This is project 17",
-        "tags": ["tag2", "tag5"],
+        "tags": ["networking", "c#", "OOP"],
         "images": [],
         "videos": []
-    },
-    "17": {
+        },
+        "17": {
         "title": "Project 18",
         "description": "This is project 18",
-        "tags": ["tag3", "tag2"],
+        "tags": ["AI", "java"],
         "images": [],
         "videos": []
-    },
-    "18": {
+        },
+        "18": {
         "title": "Project 19",
         "description": "This is project 19",
-        "tags": ["tag2", "tag5"],
+        "tags": ["webdev", "javascript", "OOP"],
         "images": [],
         "videos": []
-    },
-    "19": {
+        },
+        "19": {
         "title": "Project 20",
         "description": "This is project 20",
-        "tags": ["tag2", "tag3"],
+        "tags": ["database", "python"],
         "images": [],
         "videos": []
-    },
-    "20": {
+        },
+        "20": {
         "title": "Project 21",
         "description": "This is project 21",
-        "tags": ["tag4", "tag2"],
+        "tags": ["game-dev", "Unity", "c++"],
         "images": [],
         "videos": []
-    },
-    "21": {
+        },
+        "21": {
         "title": "Project 22",
         "description": "This is project 22",
-        "tags": ["tag1", "tag2"],
+        "tags": ["webdev"],
         "images": [],
         "videos": []
     }
