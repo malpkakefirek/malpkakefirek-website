@@ -10,13 +10,12 @@
   --nav-text-active-color: #350000;
   --main-background-color: #201235;
   --article-background-color: #271640;
-  --article-border-color: #450000;
+  --article-border-color: #1d0129;
   --footer-background-color: #211136;
   --header-background-image: url(./images/static/banner.png);
   --glow-color: rgba(102,16,172,0.8);
   --send-background-color: yellow;
   --send-border-color: black;
-  --article-images-border-color: #450000;
   --article-images-discord-background-color: #36393F;
   --article-images-discord-border-color: #450000;
   --footer-color: #fff;
@@ -123,14 +122,20 @@ body {
   display: flex;
   justify-content: center;
   flex: 1;
+  width: 100%;
 }
 
 .nav-list,
-article,
-.footer-content,
-.article-background {
+.footer-content {
   width: 100%;
   max-width: 50rem;
+}
+
+article,
+.article-background {
+  /* width: 100%; */
+  width: 75rem;
+  justify-self: center;
 }
 
 .nav-list-item {
@@ -176,6 +181,7 @@ main {
 .content-background {
   /* background-color: var(--main-background-color); */
   padding: 2rem 0;
+  width: 100%;
 }
 
 /* .title {
@@ -276,6 +282,112 @@ h2 {
   font-size: 1.2rem;
 }
 
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.project-item {
+  background-color: var(--main-background-color);
+  border: 2px solid var(--article-border-color);
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: center;
+  padding: 1.5rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.project-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px 0 var(--glow-color);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  color: var(--text-color);
+}
+
+.project-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-color);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* .project-links {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: var(--nav-text-color);
+  background: var(--nav-color);
+  border-radius: 2rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+  background: var(--nav-hover-color);
+  color: var(--nav-text-hover-color);
+  text-decoration: underline;
+} */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+
+.tag {
+  background-color: var(--nav-color);
+  color: var(--nav-text-color);
+  border-radius: 1rem;
+  padding: 0.2rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--article-border-color);
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+}
+
+.tag:hover {
+  background: var(--nav-hover-color);
+  color: var(--nav-text-hover-color);
+}
+
+/* specific tags colors */
+.tag-html {
+  background-color: #E34F26;
+  color: #FFFFFF;
+}
+
+
 footer {
   background: var(--footer-background-color);
   color: var(--footer-color);
@@ -283,6 +395,36 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+@media (max-width: 1240px) {
+  article,
+  .article-background {
+    width: 49.25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-item {
+    width: 100%;
+    max-width: 100%;
+    /* padding: 1rem; */
+  }
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  article,
+  .article-background {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -304,5 +446,18 @@ footer {
   .nav {
     margin: 0;
     padding: 0;
+  }
+  .project-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-description {
+    font-size: 0.95rem;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
   }
 }

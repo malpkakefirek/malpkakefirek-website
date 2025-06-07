@@ -10,10 +10,16 @@ function createProjectDiv(project) {
     div.className = 'project-item';
 
     const title = document.createElement('h3');
+    title.className = 'project-title';
     title.textContent = project.title;
 
     const img = document.createElement('img');
+    img.className = 'project-thumbnail';
     img.src = `images/projects/${project.id}/0.png`;
+    img.onerror = function() {
+        this.onerror = null;
+        this.src = 'images/projects/missing.png';
+    };
     img.alt = project.title;
 
     const tagsDiv = document.createElement('div');
@@ -21,7 +27,7 @@ function createProjectDiv(project) {
     if (project.tags && project.tags.length) {
         project.tags.forEach(tag => {
             const tagSpan = document.createElement('span');
-            tagSpan.className = 'tag';
+            tagSpan.classList.add('tag', `tag-${tag}`);
             tagSpan.textContent = tag;
             tagsDiv.appendChild(tagSpan);
         });
@@ -62,9 +68,6 @@ function renderProjects(projects, tags, page) {
     const projectList = document.getElementById('project-list');
     if (!projectList) return;
 
-    // Clear previous content
-    projectList.innerHTML = '';
-
     const filtered = filterProjectsByTags(projects, tags);
     const projectsPerPage = 20;
     const totalPages = Math.ceil(filtered.length / projectsPerPage);
@@ -73,8 +76,15 @@ function renderProjects(projects, tags, page) {
     const end = start + projectsPerPage;
     const pageProjects = filtered.slice(start, end);
 
-    const grid = document.createElement('div');
-    grid.className = 'project-grid';
+    let grid = document.getElementById('project-grid');
+    if (!grid) return;
+
+    // Clear existing grid content if there are any projects
+    if (filtered.length > 0) {
+        grid.innerHTML = '';
+    } else {
+        return;
+    }
 
     pageProjects.forEach(project => {
         grid.appendChild(createProjectDiv(project));
@@ -226,15 +236,16 @@ fetch("projects.json")
         // Get URL parameters
         const url = new URL(window.location.href);
 
-        let tags = url.searchParams.get("tags");
+        var tags = url.searchParams.get("tags");
         if (tags) {
             tags = tags.split(",");
         }
-        let page = url.searchParams.get("page");
+        var page = url.searchParams.get("page");
 
         console.log(tags);
         console.log(page);
 
 
-
+        // Render projects based on tags and page
+        renderProjects(projects, tags, page);
     });
