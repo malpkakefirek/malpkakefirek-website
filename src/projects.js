@@ -111,48 +111,26 @@ function showProjectPopup(project, key) {
     // Create overlay
     const overlay = document.createElement('div');
     overlay.className = 'project-popup-overlay';
-    overlay.style.position = 'fixed';
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
-    overlay.style.background = 'rgba(0,0,0,0.7)';
-    overlay.style.zIndex = 10000;
-    overlay.style.display = 'flex';
-    overlay.style.justifyContent = 'center';
-    overlay.style.alignItems = 'center';
 
     // Popup container
     const popup = document.createElement('div');
     popup.className = 'project-popup';
-    popup.style.background = '#fff';
-    popup.style.padding = '2rem';
-    popup.style.borderRadius = '8px';
-    popup.style.maxWidth = '800px';
-    popup.style.maxHeight = '90vh';
-    popup.style.overflowY = 'auto';
-    popup.style.position = 'relative';
 
     // Close button
     const closeBtn = document.createElement('button');
     closeBtn.textContent = '✕';
     closeBtn.className = 'popup-close-btn';
-    closeBtn.style.position = 'absolute';
-    closeBtn.style.top = '1rem';
-    closeBtn.style.right = '1rem';
-    closeBtn.style.fontSize = '1.5rem';
-    closeBtn.style.background = 'transparent';
-    closeBtn.style.border = 'none';
-    closeBtn.style.cursor = 'pointer';
     closeBtn.addEventListener('click', closeProjectPopup);
 
     // Title
     const title = document.createElement('h2');
+    title.className = 'project-popup-title';
     title.textContent = project.title;
 
     // Description
     const desc = document.createElement('p');
-    desc.textContent = project.description || '';
+    desc.className = 'project-description';
+    desc.textContent = project.description || 'No description provided :/';
 
     // Tags
     const tagsDiv = document.createElement('div');
@@ -202,8 +180,8 @@ function showProjectPopup(project, key) {
     popup.appendChild(closeBtn);
     popup.appendChild(title);
     popup.appendChild(desc);
-    popup.appendChild(tagsDiv);
     popup.appendChild(mediaDiv);
+    popup.appendChild(tagsDiv);
 
     overlay.appendChild(popup);
     document.body.appendChild(overlay);

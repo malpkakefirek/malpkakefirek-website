@@ -47,6 +47,17 @@
 
           <article id="project-list">
             <h2>Lorem ipsum</h2>
+            <div class="tag-filter">
+              <div class="tag-filter-top">
+                <button id="tag-dropdown-toggle" type="button">Filter by tags ▼</button>
+                <div id="tag-dropdown-container" class="dropdown-collapsed">
+                  <ul id="tag-dropdown" class="tag-dropdown-list"></ul>
+                </div>
+                <button id="apply-tags-btn" type="button" style="display:none;">Apply tags</button>
+              </div>
+              <span id="selected-tags"></span>
+            </div>
+            <script src="tags.js"></script>
             <div class="project-grid" id="project-grid">
               There are no projects to display at the moment.
             </div>

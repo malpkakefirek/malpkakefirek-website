@@ -1,0 +1,50 @@
+{
+    "webdev": {
+        "color": "#4CAF50"
+    },
+    "database": {
+        "color": "#2196F3"
+    },
+    "networking": {
+        "color": "#FF9800"
+    },
+    "game-dev": {
+        "color": "#9C27B0"
+    },
+    "OOP": {
+        "color": "#F44336"
+    },
+    "AI": {
+        "color": "#673AB7"
+    },
+    "python": {
+        "color": "#FF5722"
+    },
+    "javascript": {
+        "color": "#3F51B5"
+    },
+    "java": {
+        "color": "#E91E63"
+    },
+    "c++": {
+        "color": "#009688"
+    },
+    "c#": {
+        "color": "#795548"
+    },
+    "Svelte": {
+        "color": "#607D8B"
+    },
+    "PHP": {
+        "color": "#8BC34A"
+    },
+    "Flask": {
+        "color": "#CDDC39"
+    },
+    "PostgreSQL": {
+        "color": "#FFEB3B"
+    },
+    "Unity": {
+        "color": "#00BCD4"
+    }
+}
