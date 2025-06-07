@@ -1,19 +1,20 @@
 // Load projects from projects.json
 var projects = {};
-$.getJSON("projects.json", function(data) {
-    projects = data;
-});
+fetch("projects.json")
+    .then(response => response.json())
+    .then(data => {
+        projects = data;
+        console.log(projects);
 
-console.log(projects);
+        // Get URL parameters
+        const url = new URL(window.location.href);
 
-// Get URL parameters
-url = new URL(window.location.href);
+        let tags = url.searchParams.get("tags");
+        if (tags) {
+            tags = tags.split(",");
+        }
+        let page = url.searchParams.get("page");
 
-tags = url.searchParams.get("tags");
-if (tags) {
-    tags = tags.split(",");
-}
-page = url.searchParams.get("page");
-
-console.log(tags);
-console.log(page);
+        console.log(tags);
+        console.log(page);
+    });
