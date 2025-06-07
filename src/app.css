@@ -680,6 +680,14 @@ footer {
   .project-grid {
     gap: 1rem;
   }
+
+  .nav-list > :first-child {
+    border-radius: unset;
+  }
+
+  .nav-list > :last-child {
+    border-radius: unset;
+  }
 }
 
 @media (max-width: 500px) {
