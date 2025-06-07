@@ -169,6 +169,7 @@ function showProjectPopup(project, key) {
         project.tags.forEach(tag => {
             const tagSpan = document.createElement('span');
             tagSpan.className = 'tag';
+            tagSpan.classList.add(`tag-${tag}`);
             tagSpan.textContent = tag;
             tagsDiv.appendChild(tagSpan);
         });
