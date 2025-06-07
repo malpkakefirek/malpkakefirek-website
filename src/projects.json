@@ -2,13 +2,11 @@
     "0": {
         "name": "Project 1",
         "description": "This is project 1",
-        "image": "project1.jpg",
-        "urls": []
+        "tags": ["tag1", "tag2"]
     },
     "1": {
         "name": "Project 2",
         "description": "This is project 2",
-        "image": "project2.jpg",
-        "urls": []
+        "tags": ["tag2", "tag3"]
     }
 }
