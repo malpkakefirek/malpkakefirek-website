@@ -1,11 +1,15 @@
 function filterProjectsByTags(projects, tags) {
-    if (!tags || tags.length === 0) return Object.values(projects);
-    return Object.values(projects).filter(project =>
-        tags.every(tag => project.tags && project.tags.includes(tag))
-    );
+    if (!tags || tags.length === 0) return projects;
+    const filtered = {};
+    for (const [key, project] of Object.entries(projects)) {
+        if (project.tags && tags.every(tag => project.tags.includes(tag))) {
+            filtered[key] = project;
+        }
+    }
+    return filtered;
 }
 
-function createProjectDiv(project) {
+function createProjectDiv(project, key) {
     const div = document.createElement('div');
     div.className = 'project-item';
 
@@ -15,11 +19,11 @@ function createProjectDiv(project) {
 
     const img = document.createElement('img');
     img.className = 'project-thumbnail';
-    img.src = `images/projects/${project.id}/0.png`;
-    img.onerror = function() {
-        this.onerror = null;
-        this.src = 'images/projects/missing.png';
-    };
+    if (Array.isArray(project.images) && project.images.includes("0.png")) {
+        img.src = `images/projects/${key}/0.png`;
+    } else {
+        img.src = 'images/projects/missing.png';
+    }
     img.alt = project.title;
 
     const tagsDiv = document.createElement('div');
@@ -38,7 +42,7 @@ function createProjectDiv(project) {
     div.appendChild(tagsDiv);
 
     // Add click event to show popup
-    div.addEventListener('click', () => showProjectPopup(project));
+    div.addEventListener('click', () => showProjectPopup(project, key));
 
     return div;
 }
@@ -68,26 +72,27 @@ function renderProjects(projects, tags, page) {
     const projectList = document.getElementById('project-list');
     if (!projectList) return;
 
-    const filtered = filterProjectsByTags(projects, tags);
-    const projectsPerPage = 20;
-    const totalPages = Math.ceil(filtered.length / projectsPerPage);
+    const filteredObj = filterProjectsByTags(projects, tags);
+    const filteredKeys = Object.keys(filteredObj);
+    const projectsPerPage = 12;
+    const totalPages = Math.ceil(filteredKeys.length / projectsPerPage);
     const currentPage = Math.max(1, parseInt(page) || 1);
     const start = (currentPage - 1) * projectsPerPage;
     const end = start + projectsPerPage;
-    const pageProjects = filtered.slice(start, end);
+    const pageProjects = filteredKeys.slice(start, end).map(key => filteredObj[key]);
 
     let grid = document.getElementById('project-grid');
     if (!grid) return;
 
     // Clear existing grid content if there are any projects
-    if (filtered.length > 0) {
+    if (pageProjects.length > 0) {
         grid.innerHTML = '';
     } else {
         return;
     }
 
-    pageProjects.forEach(project => {
-        grid.appendChild(createProjectDiv(project));
+    filteredKeys.slice(start, end).forEach(key => {
+        grid.appendChild(createProjectDiv(filteredObj[key], key));
     });
 
     projectList.appendChild(grid);
@@ -99,7 +104,7 @@ function renderProjects(projects, tags, page) {
 
 // --- Popup logic ---
 
-function showProjectPopup(project) {
+function showProjectPopup(project, key) {
     // Remove existing popup if any
     closeProjectPopup();
 
@@ -168,36 +173,30 @@ function showProjectPopup(project) {
     mediaDiv.style.flexWrap = 'wrap';
     mediaDiv.style.gap = '1rem';
 
-    // Try to load images and videos from images/projects/{project.id}/
-    // We'll try 0.png, 1.png, ..., 9.png and 0.mp4, 1.mp4, ..., 9.mp4
-    for (let i = 0; i < 10; i++) {
-        // Image
-        const img = new Image();
-        img.src = `images/projects/${project.id}/${i}.png`;
-        img.alt = project.title;
-        img.style.maxWidth = '200px';
-        img.style.maxHeight = '150px';
-        img.style.objectFit = 'cover';
-        img.onerror = function() { this.style.display = 'none'; };
-        img.onload = function() { mediaDiv.appendChild(img); };
+    // Use images and videos from the project object if available
+    if (Array.isArray(project.images)) {
+        project.images.forEach(imageName => {
+            const img = new Image();
+            img.src = `images/projects/${key}/${imageName}`;
+            img.alt = project.title;
+            img.style.maxWidth = '200px';
+            img.style.maxHeight = '150px';
+            img.style.objectFit = 'cover';
+            img.onerror = function() { this.style.display = 'none'; };
+            mediaDiv.appendChild(img);
+        });
+    }
 
-        // Video
-        const video = document.createElement('video');
-        video.src = `images/projects/${project.id}/${i}.mp4`;
-        video.controls = true;
-        video.style.maxWidth = '200px';
-        video.style.maxHeight = '150px';
-        video.style.display = 'none';
-        video.onloadeddata = function() { this.style.display = 'block'; mediaDiv.appendChild(video); };
-        video.onerror = function() { this.remove(); };
-
-        // Preload image to check if it exists
-        document.body.appendChild(img);
-        document.body.removeChild(img);
-
-        // Preload video to check if it exists
-        document.body.appendChild(video);
-        document.body.removeChild(video);
+    if (Array.isArray(project.videos)) {
+        project.videos.forEach(videoName => {
+            const video = document.createElement('video');
+            video.src = `images/projects/${key}/${videoName}`;
+            video.controls = true;
+            video.style.maxWidth = '200px';
+            video.style.maxHeight = '150px';
+            video.onerror = function() { this.remove(); };
+            mediaDiv.appendChild(video);
+        });
     }
 
     popup.appendChild(closeBtn);
@@ -231,7 +230,6 @@ fetch("projects.json")
     .then(response => response.json())
     .then(data => {
         projects = data;
-        console.log(projects);
 
         // Get URL parameters
         const url = new URL(window.location.href);
@@ -244,7 +242,6 @@ fetch("projects.json")
 
         console.log(tags);
         console.log(page);
-
 
         // Render projects based on tags and page
         renderProjects(projects, tags, page);
