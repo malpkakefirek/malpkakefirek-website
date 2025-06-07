@@ -50,15 +50,40 @@ function createProjectDiv(project, key) {
 function createPagination(totalPages, currentPage) {
     const paginationDiv = document.createElement('div');
     paginationDiv.className = 'pagination';
+
+    // Left arrow
+    const leftArrow = document.createElement('a');
+    leftArrow.innerHTML = '←';
+    leftArrow.href = updateUrlParam(window.location.href, 'page', Math.max(1, currentPage - 1));
+    leftArrow.className = 'arrow left-arrow';
+    if (currentPage === 1) {
+        leftArrow.classList.add('disabled');
+        leftArrow.href = '#';
+    }
+    paginationDiv.appendChild(leftArrow);
+
     for (let i = 1; i <= totalPages; i++) {
         const pageLink = document.createElement('a');
         pageLink.href = updateUrlParam(window.location.href, 'page', i);
         pageLink.textContent = i;
+        pageLink.className = 'page-number';
         if (i === currentPage) {
-            pageLink.className = 'active';
+            pageLink.classList.add('active');
         }
         paginationDiv.appendChild(pageLink);
     }
+
+    // Right arrow
+    const rightArrow = document.createElement('a');
+    rightArrow.innerHTML = '→';
+    rightArrow.href = updateUrlParam(window.location.href, 'page', Math.min(totalPages, currentPage + 1));
+    rightArrow.className = 'arrow right-arrow';
+    if (currentPage === totalPages) {
+        rightArrow.classList.add('disabled');
+        rightArrow.href = '#';
+    }
+    paginationDiv.appendChild(rightArrow);
+
     return paginationDiv;
 }
 
