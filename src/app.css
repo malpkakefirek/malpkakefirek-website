@@ -368,7 +368,7 @@ h2 {
 
 .tag {
   background-color: var(--nav-color);
-  color: var(--nav-text-color);
+  color: #000;
   border-radius: 1rem;
   padding: 0.2rem 0.9rem;
   font-size: 0.95rem;
@@ -382,12 +382,6 @@ h2 {
   background: var(--nav-hover-color);
   color: var(--nav-text-hover-color);
 } */
-
-/* specific tags colors */
-.tag-html {
-  background-color: #E34F26;
-  color: #FFFFFF;
-}
 
 
 /* Project popup */
