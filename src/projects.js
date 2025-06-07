@@ -1,5 +1,5 @@
 // Load projects from projects.json
-var projects = [];
+var projects = {};
 $.getJSON("projects.json", function(data) {
     projects = data;
 });
@@ -10,6 +10,9 @@ console.log(projects);
 url = new URL(window.location.href);
 
 tags = url.searchParams.get("tags");
+if (tags) {
+    tags = tags.split(",");
+}
 page = url.searchParams.get("page");
 
 console.log(tags);
