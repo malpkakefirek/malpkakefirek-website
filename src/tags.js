@@ -92,6 +92,7 @@ function restoreSelectionFromURL() {
 
 applyTagsBtn.addEventListener('click', () => {
     const url = new URL(window.location);
+    url.searchParams.set('page', '1');
     if (selectedTags.length) {
         // Manually set the search string to avoid encoding the comma
         url.searchParams.set('tags', selectedTags.join(','));

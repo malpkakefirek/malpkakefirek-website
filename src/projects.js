@@ -81,6 +81,11 @@ function renderProjects(projects, tags, page) {
     const end = start + projectsPerPage;
     const pageProjects = filteredKeys.slice(start, end).map(key => filteredObj[key]);
 
+    if ((currentPage > totalPages || currentPage < 1) && totalPages > 0) {
+        window.location.href = updateUrlParam(window.location.href, 'page', 1);
+        return;
+    }
+
     let grid = document.getElementById('project-grid');
     if (!grid) return;
 
