@@ -1,152 +1,154 @@
 {
     "0": {
-        "title": "Project 1",
-        "description": "This is project 1",
-        "tags": ["webdev", "javascript", "OOP"],
-        "images": [],
-        "videos": []
-        },
-        "1": {
-        "title": "Project 2",
-        "description": "This is project 2",
-        "tags": ["database", "python"],
-        "images": [],
-        "videos": []
-        },
-        "2": {
+        "title": "Discern – Unity Game",
+        "description": "Move in a 3D first-person environment and patrol rooms for unpredictable changes. Anomalies will show up periodically, so keep your eye out. Use your tablet to select the affected room and identify the correct anomaly category from 8 different types. Accurate reports will trigger a remote neutralization sequence. If you're not observant enough, anomalies will take over the area and lead to dire consequences.\n\nThe game is in a very early stage of development. Tutorial needs a rework and more maps are to be made, including new mechanics and anomaly types. The current build is playable and can be downloaded from https://tigerxplso.itch.io/discern",
+        "tags": ["game-dev", "Unity", "C#"],
+        "images": ["thumb.png", "reporting.gif", "anomalies.gif", "bathroom.png", "office.png", "table.png", "scenery.png", "menu.png"],
+        "videos": [],
+        "members": 2
+    },
+    "1": {
+        "title": "Smart Chatka Puchatka",
+        "description": "The project is a physical smart house for your pet. It consists of a ESP32 microcontroller connected to a camera, movement sensor, water pump, liquid level sensor, heater (simulated), and temperature sensor. It connects to a VPS via a mosquitto MQTT broker. The user can control the house via a web application or a mobile app, which allows them to monitor the pet's activity, check the sensor data, control the temperature, and check historical data from sensors with plots. The temperature can be controlled via a temperature threshold setting and can be additionally adjusted to a schedule. The user can invite others to be able to access the house and monitor the pet's activity. The initial setup is done via a simple QR-code scan. Once the house is set up, the QR code is no longer valid, to prevent unauthorized access. \n\nThe backend and frontend are written in Python using Django. There is an additional admin panel and SSH access to the VPS for company employees. Everything is containerized using Docker and docker-compose and secured using SSL/TLS. The project was made under the SCRUM methodology and using kamban boards to monitor the progress. Collaboration was done using GitHub and Discord. Every week there was a stand-up meeting showing our progress. Also every week we had a retrospective meeting to discuss what went well and what could be improved. Instead of doing SCRUM Poker, all of us assigned story points to each task, after which we calculated a weighted average of the points to estimate the effort required for each task. This method accellerated the development process during complicated student life, without sacrificing quality. \nA demo presentation can be found on Youtube at https://www.youtube.com/watch?v=1Ao9_D6l9R0",
+        "tags": ["webdev", "database", "python", "javascript", "hardware"],
+        "images": ["poster_p1.png", "poster_p2.png", "heating_schedule.png", "temperature_chart.png", "water_chart.png", "cumulative_chart.png", "tasks.png"],
+        "videos": ["mobile_app_development_preview.mp4"],
+        "members": 8
+    },
+    "2": {
         "title": "Project 3",
         "description": "This is project 3",
         "tags": ["AI", "python", "database"],
         "images": [],
         "videos": []
-        },
-        "3": {
+    },
+    "3": {
         "title": "Project 4",
         "description": "This is project 4",
         "tags": ["game-dev", "Unity"],
         "images": [],
         "videos": []
-        },
-        "4": {
+    },
+    "4": {
         "title": "Project 5",
         "description": "This is project 5",
         "tags": ["webdev", "Svelte", "javascript", "PHP"],
         "images": [],
         "videos": []
-        },
-        "5": {
+    },
+    "5": {
         "title": "Project 6",
         "description": "This is project 6",
         "tags": ["networking", "c++", "OOP"],
         "images": [],
         "videos": []
-        },
-        "6": {
+    },
+    "6": {
         "title": "Project 7",
         "description": "This is project 7",
         "tags": ["AI", "java"],
         "images": [],
         "videos": []
-        },
-        "7": {
+    },
+    "7": {
         "title": "Project 8",
         "description": "This is project 8",
         "tags": ["database", "PostgreSQL", "Flask"],
         "images": [],
         "videos": []
-        },
-        "8": {
+    },
+    "8": {
         "title": "Project 9",
         "description": "This is project 9",
         "tags": ["webdev", "javascript", "PHP"],
         "images": [],
         "videos": []
-        },
-        "9": {
+    },
+    "9": {
         "title": "Project 10",
         "description": "This is project 10",
         "tags": ["networking", "c#", "OOP"],
         "images": [],
         "videos": []
-        },
-        "10": {
+    },
+    "10": {
         "title": "Project 11",
         "description": "This is project 11",
         "tags": ["AI", "python", "database"],
         "images": [],
         "videos": []
-        },
-        "11": {
+    },
+    "11": {
         "title": "Project 12",
         "description": "This is project 12",
         "tags": ["game-dev", "Unity", "c++"],
         "images": [],
         "videos": []
-        },
-        "12": {
+    },
+    "12": {
         "title": "Project 13",
         "description": "This is project 13",
         "tags": ["webdev", "Svelte"],
         "images": [],
         "videos": []
-        },
-        "13": {
+    },
+    "13": {
         "title": "Project 14",
         "description": "This is project 14",
         "tags": ["database", "PostgreSQL", "Flask", "python"],
         "images": [],
         "videos": []
-        },
-        "14": {
+    },
+    "14": {
         "title": "Project 15",
         "description": "This is project 15",
         "tags": ["webdev"],
         "images": [],
         "videos": []
-        },
-        "15": {
+    },
+    "15": {
         "title": "Project 16",
         "description": "This is project 16",
         "tags": ["game-dev", "Unity"],
         "images": [],
         "videos": []
-        },
-        "16": {
+    },
+    "16": {
         "title": "Project 17",
         "description": "This is project 17",
         "tags": ["networking", "c#", "OOP"],
         "images": [],
         "videos": []
-        },
-        "17": {
+    },
+    "17": {
         "title": "Project 18",
         "description": "This is project 18",
         "tags": ["AI", "java"],
         "images": [],
         "videos": []
-        },
-        "18": {
+    },
+    "18": {
         "title": "Project 19",
         "description": "This is project 19",
         "tags": ["webdev", "javascript", "OOP"],
         "images": [],
         "videos": []
-        },
-        "19": {
+    },
+    "19": {
         "title": "Project 20",
         "description": "This is project 20",
         "tags": ["database", "python"],
         "images": [],
         "videos": []
-        },
-        "20": {
+    },
+    "20": {
         "title": "Project 21",
         "description": "This is project 21",
         "tags": ["game-dev", "Unity", "c++"],
         "images": [],
         "videos": []
-        },
-        "21": {
+    },
+    "21": {
         "title": "Project 22",
         "description": "This is project 22",
         "tags": ["webdev"],

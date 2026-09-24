@@ -19,8 +19,8 @@ function createProjectDiv(project, key) {
 
     const img = document.createElement('img');
     img.className = 'project-thumbnail';
-    if (Array.isArray(project.images) && project.images.includes("0.png")) {
-        img.src = `images/projects/${key}/0.png`;
+    if (Array.isArray(project.images) && project.images.includes("thumb.png")) {
+        img.src = `images/projects/${key}/thumb.png`;
     } else {
         img.src = 'images/projects/missing.png';
     }
@@ -162,6 +162,11 @@ function showProjectPopup(project, key) {
     desc.className = 'project-description';
     desc.textContent = project.description || 'No description provided :/';
 
+    // Member count
+    const memberCount = document.createElement('p');
+    memberCount.className = 'project-member-count';
+    memberCount.textContent = `Made by ${(project.members === 1 || project.members === undefined) ? "myself" : `a team of ${project.members} people`}`;
+
     // Tags
     const tagsDiv = document.createElement('div');
     tagsDiv.className = 'project-tags';
@@ -212,6 +217,7 @@ function showProjectPopup(project, key) {
     popup.appendChild(title);
     popup.appendChild(desc);
     popup.appendChild(mediaDiv);
+    popup.appendChild(memberCount);
     popup.appendChild(tagsDiv);
 
     overlay.appendChild(popup);

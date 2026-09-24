@@ -46,5 +46,8 @@
     },
     "Unity": {
         "color": "#00BCD4"
+    },
+    "hardware": {
+        "color": "#FF5722"
     }
 }
