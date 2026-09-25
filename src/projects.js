@@ -20,9 +20,9 @@ function createProjectDiv(project, key) {
     const img = document.createElement('img');
     img.className = 'project-thumbnail';
     if (Array.isArray(project.images) && project.images.includes("thumb.png")) {
-        img.src = `images/projects/${key}/thumb.png`;
+        img.src = `media/projects/${key}/thumb.png`;
     } else {
-        img.src = 'images/projects/missing.png';
+        img.src = 'media/projects/missing.png';
     }
     img.alt = project.title;
 
@@ -194,13 +194,13 @@ function showProjectPopup(project, key) {
             ${project.videos ? project.videos.map((videoName, index) => `<div class="mySlides">
                             <div class="numbertext">${index + 1} / ${project.videos.length + project.images.length}</div>
                 <video controls style="width:100%;">
-                    <source src="images/projects/${key}/${videoName}" type="video/mp4">
+                    <source src="media/projects/${key}/${videoName}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>`).join('') : ''}
             ${project.images ? project.images.map((imageName, index) => `<div class="mySlides">
                 <div class="numbertext">${index + 1 + project.videos.length} / ${project.videos.length + project.images.length}</div>
-                <img src="images/projects/${key}/${imageName}" alt="${project.title}" style="width:100%;">
+                <img src="media/projects/${key}/${imageName}" alt="${project.title}" style="width:100%;">
             </div>`).join('') : ''}
 
             <!-- Next and previous buttons -->
@@ -215,10 +215,10 @@ function showProjectPopup(project, key) {
             <!-- Thumbnail images -->
             <div class="row">
                 ${project.videos ? project.videos.map((videoName, index) => `<div class="column">
-                    <img class="demo cursor" src="videos/projects/${key}/${videoName}" style="width:100%" onclick="currentSlide(${index + 1})" alt="${project.title}">
+                    <img class="demo cursor" src="media/projects/${key}/${videoName}" style="width:100%" onclick="currentSlide(${index + 1})" alt="${project.title}">
                 </div>`).join('') : ''}
                 ${project.images ? project.images.map((imageName, index) => `<div class="column">
-                    <img class="demo cursor" src="images/projects/${key}/${imageName}" style="width:100%" onclick="currentSlide(${index + 1 + project.videos.length})" alt="${project.title}">
+                    <img class="demo cursor" src="media/projects/${key}/${imageName}" style="width:100%" onclick="currentSlide(${index + 1 + project.videos.length})" alt="${project.title}">
                 </div>`).join('') : ''}
             </div>
             </div>
@@ -232,7 +232,7 @@ function showProjectPopup(project, key) {
     // if (Array.isArray(project.images)) {
     //     project.images.forEach(imageName => {
     //         const img = new Image();
-    //         img.src = `images/projects/${key}/${imageName}`;
+    //         img.src = `media/projects/${key}/${imageName}`;
     //         img.alt = project.title;
     //         img.style.maxWidth = '200px';
     //         img.style.maxHeight = '150px';
@@ -245,7 +245,7 @@ function showProjectPopup(project, key) {
     // if (Array.isArray(project.videos)) {
     //     project.videos.forEach(videoName => {
     //         const video = document.createElement('video');
-    //         video.src = `images/projects/${key}/${videoName}`;
+    //         video.src = `media/projects/${key}/${videoName}`;
     //         video.controls = true;
     //         video.style.maxWidth = '200px';
     //         video.style.maxHeight = '150px';
