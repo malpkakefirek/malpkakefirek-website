@@ -181,42 +181,80 @@ function showProjectPopup(project, key) {
     }
 
     // Media (images & videos)
-    const mediaDiv = document.createElement('div');
-    mediaDiv.className = 'project-media';
-    mediaDiv.style.display = 'flex';
-    mediaDiv.style.flexWrap = 'wrap';
-    mediaDiv.style.gap = '1rem';
+    if ((project.images && project.images.length > 0) || (project.videos && project.videos.length > 0)) {
+        const mediaDiv = document.createElement('div');
+        mediaDiv.className = 'project-media';
+        mediaDiv.innerHTML = `
+            <!-- Container for the image gallery -->
+            <div class="container">
+
+            <!-- Full-width images with number text loop -->
+            ${project.videos ? project.videos.map(videoName => `<div class="mySlides">
+                <div class="numbertext">${key+1} / ${project.videos.length + project.images.length}</div>
+                <video controls style="width:100%;">
+                    <source src="images/projects/${key}/${videoName}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>`).join('') : ''}
+            ${project.images ? project.images.map(imageName => `<div class="mySlides">
+                <div class="numbertext">${key+1 + project.videos.length} / ${project.videos.length + project.images.length}</div>
+                <img src="images/projects/${key}/${imageName}" alt="${project.title}" style="width:100%;">
+            </div>`).join('') : ''}
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                ${project.images ? project.images.map(imageName => `<div class="column">
+                    <img class="demo cursor" src="images/projects/${key}/${imageName}" style="width:100%" onclick="currentSlide(1)" alt="${project.title}">
+                </div>`).join('') : ''}
+            </div>
+            </div>
+        `;
+    }
+
+
+
 
     // Use images and videos from the project object if available
-    if (Array.isArray(project.images)) {
-        project.images.forEach(imageName => {
-            const img = new Image();
-            img.src = `images/projects/${key}/${imageName}`;
-            img.alt = project.title;
-            img.style.maxWidth = '200px';
-            img.style.maxHeight = '150px';
-            img.style.objectFit = 'cover';
-            img.onerror = function() { this.style.display = 'none'; };
-            mediaDiv.appendChild(img);
-        });
-    }
+    // if (Array.isArray(project.images)) {
+    //     project.images.forEach(imageName => {
+    //         const img = new Image();
+    //         img.src = `images/projects/${key}/${imageName}`;
+    //         img.alt = project.title;
+    //         img.style.maxWidth = '200px';
+    //         img.style.maxHeight = '150px';
+    //         img.style.objectFit = 'cover';
+    //         img.onerror = function() { this.style.display = 'none'; };
+    //         mediaDiv.appendChild(img);
+    //     });
+    // }
 
-    if (Array.isArray(project.videos)) {
-        project.videos.forEach(videoName => {
-            const video = document.createElement('video');
-            video.src = `images/projects/${key}/${videoName}`;
-            video.controls = true;
-            video.style.maxWidth = '200px';
-            video.style.maxHeight = '150px';
-            video.onerror = function() { this.remove(); };
-            mediaDiv.appendChild(video);
-        });
-    }
+    // if (Array.isArray(project.videos)) {
+    //     project.videos.forEach(videoName => {
+    //         const video = document.createElement('video');
+    //         video.src = `images/projects/${key}/${videoName}`;
+    //         video.controls = true;
+    //         video.style.maxWidth = '200px';
+    //         video.style.maxHeight = '150px';
+    //         video.onerror = function() { this.remove(); };
+    //         mediaDiv.appendChild(video);
+    //     });
+    // }
 
     popup.appendChild(closeBtn);
     popup.appendChild(title);
     popup.appendChild(desc);
-    popup.appendChild(mediaDiv);
+    if (mediaDiv) {
+        popup.appendChild(mediaDiv);
+    }
     popup.appendChild(memberCount);
     popup.appendChild(tagsDiv);
 
