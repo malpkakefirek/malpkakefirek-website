@@ -133,6 +133,7 @@ function renderProjects(projects, tags, page) {
 }
 
 // --- Popup logic ---
+let slideIndex;
 
 function showProjectPopup(project, key) {
     // Remove existing popup if any
@@ -262,7 +263,7 @@ function showProjectPopup(project, key) {
     overlay.appendChild(popup);
     document.body.appendChild(overlay);
 
-    let slideIndex = 1;
+    slideIndex = 1;
     showSlides(slideIndex);
 
     // Close popup when clicking outside the popup area
