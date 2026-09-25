@@ -191,15 +191,15 @@ function showProjectPopup(project, key) {
             <div class="container">
 
             <!-- Full-width images with number text loop -->
-            ${project.videos ? project.videos.map(videoName => `<div class="mySlides">
-                <div class="numbertext">${key+1} / ${project.videos.length + project.images.length}</div>
+            ${project.videos ? project.videos.map((videoName, index) => `<div class="mySlides">
+                            <div class="numbertext">${index + 1} / ${project.videos.length + project.images.length}</div>
                 <video controls style="width:100%;">
                     <source src="images/projects/${key}/${videoName}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>`).join('') : ''}
-            ${project.images ? project.images.map(imageName => `<div class="mySlides">
-                <div class="numbertext">${key+1 + project.videos.length} / ${project.videos.length + project.images.length}</div>
+            ${project.images ? project.images.map((imageName, index) => `<div class="mySlides">
+                <div class="numbertext">${index + 1 + project.videos.length} / ${project.videos.length + project.images.length}</div>
                 <img src="images/projects/${key}/${imageName}" alt="${project.title}" style="width:100%;">
             </div>`).join('') : ''}
 
@@ -214,8 +214,11 @@ function showProjectPopup(project, key) {
 
             <!-- Thumbnail images -->
             <div class="row">
-                ${project.images ? project.images.map(imageName => `<div class="column">
-                    <img class="demo cursor" src="images/projects/${key}/${imageName}" style="width:100%" onclick="currentSlide(1)" alt="${project.title}">
+                ${project.videos ? project.videos.map((videoName, index) => `<div class="column">
+                    <img class="demo cursor" src="videos/projects/${key}/${videoName}" style="width:100%" onclick="currentSlide(${index + 1})" alt="${project.title}">
+                </div>`).join('') : ''}
+                ${project.images ? project.images.map((imageName, index) => `<div class="column">
+                    <img class="demo cursor" src="images/projects/${key}/${imageName}" style="width:100%" onclick="currentSlide(${index + 1 + project.videos.length})" alt="${project.title}">
                 </div>`).join('') : ''}
             </div>
             </div>
@@ -256,15 +259,14 @@ function showProjectPopup(project, key) {
     popup.appendChild(desc);
     if (mediaDiv) {
         popup.appendChild(mediaDiv);
+        slideIndex = 1;
+        showSlides(slideIndex);
     }
     popup.appendChild(memberCount);
     popup.appendChild(tagsDiv);
 
     overlay.appendChild(popup);
     document.body.appendChild(overlay);
-
-    slideIndex = 1;
-    showSlides(slideIndex);
 
     // Close popup when clicking outside the popup area
     overlay.addEventListener('click', function(e) {
@@ -300,6 +302,18 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
+
+    // Target the specific thumbnail that just became active
+    const activeThumbnail = document.querySelectorAll('.demo')[slideIndex - 1]; 
+
+    // Scroll it into the center of the view
+    if (activeThumbnail) {
+        activeThumbnail.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'nearest', 
+            inline: 'center' 
+        });
+    }
 }
 
 function closeProjectPopup() {

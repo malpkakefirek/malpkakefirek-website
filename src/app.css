@@ -676,21 +676,34 @@ h2 {
   color: white;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.row {
+  display: flex;
+  flex-wrap: nowrap; /* Forces elements into a single line */
+  overflow-x: auto;  /* Enables horizontal scrolling */
+  overflow-y: hidden;
+  scroll-behavior: smooth; /* Smooth scrolling when moving items into view */
+  width: 100%;
 }
 
-/* Six columns side by side */
+/* Optional: Customize scrollbar appearance */
+.row::-webkit-scrollbar {
+  height: 8px;
+}
+.row::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 4px;
+}
+
 .column {
-  float: left;
-  width: 16.66%;
+  flex: 0 0 16.66%; /* Prevents shrinking and sets width to 1/6th of container */
+  max-width: 16.66%;
 }
 
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
+  height: 4rem;
+  object-fit: cover;
 }
 
 .active,
