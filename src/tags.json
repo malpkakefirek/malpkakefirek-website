@@ -49,5 +49,8 @@
     },
     "hardware": {
         "color": "#FF5722"
+    },
+    "discord": {
+        "color": "#5865F2"
     }
 }

@@ -38,8 +38,8 @@ function createProjectDiv(project, key) {
 
     const img = document.createElement('img');
     img.className = 'project-thumbnail';
-    if (Array.isArray(project.images) && project.images.includes("thumb.png")) {
-        img.src = `media/projects/${key}/thumb.png`;
+    if (Array.isArray(project.images) && project.images.includes("thumb.webp")) {
+        img.src = `media/projects/${key}/thumb.webp`;
     } else {
         img.src = 'media/projects/missing.png';
     }
@@ -203,7 +203,7 @@ function showProjectPopup(project, key) {
     // Media (images & videos)
     let mediaDiv;
     if ((project.images && project.images.length > 0) || (project.videos && project.videos.length > 0)) {
-        project.images = (project.images || []).filter(imageName => imageName !== 'thumb.png');
+        project.images = (project.images || []).filter(imageName => imageName !== 'thumb.webp');
         
         mediaDiv = document.createElement('div');
         mediaDiv.className = 'project-media';

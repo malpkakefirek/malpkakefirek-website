@@ -3,7 +3,7 @@
         "title": "Discern – Unity Game",
         "description": "Move in a 3D first-person environment and patrol rooms for unpredictable changes. Anomalies will show up periodically, so keep your eye out. Use your tablet to select the affected room and identify the correct anomaly category from 8 different types. Accurate reports will trigger a remote neutralization sequence. If you're not observant enough, anomalies will take over the area and lead to dire consequences.\n\nThe game is in a very early stage of development. Tutorial needs a rework and more maps are to be made, including new mechanics and anomaly types. The current build is playable and can be downloaded from https://tigerxplso.itch.io/discern",
         "tags": ["game-dev", "Unity", "C#"],
-        "images": ["thumb.png", "reporting.gif", "anomalies.gif", "bathroom.png", "office.png", "table.png", "scenery.png", "menu.png"],
+        "images": ["thumb.webp", "reporting.gif", "anomalies.gif", "bathroom.png", "office.png", "table.png", "scenery.png", "menu.png"],
         "videos": [],
         "members": 2
     },
@@ -11,15 +11,15 @@
         "title": "Smart Chatka Puchatka",
         "description": "The project is a physical smart house for your pet. It consists of a ESP32 microcontroller connected to a camera, movement sensor, water pump, liquid level sensor, heater (simulated), and temperature sensor. It connects to a VPS via a mosquitto MQTT broker. The user can control the house via a web application or a mobile app, which allows them to monitor the pet's activity, check the sensor data, control the temperature, and check historical data from sensors with plots. The temperature can be controlled via a temperature threshold setting and can be additionally adjusted to a schedule. The user can invite others to be able to access the house and monitor the pet's activity. The initial setup is done via a simple QR-code scan. Once the house is set up, the QR code is no longer valid, to prevent unauthorized access. \n\nThe backend and frontend are written in Python using Django. There is an additional admin panel and SSH access to the VPS for company employees. Everything is containerized using Docker and docker-compose and secured using SSL/TLS. The project was made under the SCRUM methodology and using kamban boards to monitor the progress. Collaboration was done using GitHub and Discord. Every week there was a stand-up meeting showing our progress. Also every week we had a retrospective meeting to discuss what went well and what could be improved. Instead of doing SCRUM Poker, all of us assigned story points to each task, after which we calculated a weighted average of the points to estimate the effort required for each task. This method accellerated the development process during complicated student life, without sacrificing quality. \nA demo presentation can be found on Youtube at https://www.youtube.com/watch?v=1Ao9_D6l9R0",
         "tags": ["webdev", "database", "python", "javascript", "hardware"],
-        "images": ["thumb.png", "poster_p1.png", "poster_p2.png", "heating_schedule.png", "temperature_chart.jpg", "water_chart.png", "cumulative_chart.png", "tasks.png"],
+        "images": ["thumb.webp", "poster_p1.png", "poster_p2.png", "heating_schedule.png", "temperature_chart.jpg", "water_chart.png", "cumulative_chart.png", "tasks.png"],
         "videos": ["mobile_app_development_preview.mp4"],
         "members": 8
     },
     "2": {
-        "title": "Project 3",
-        "description": "This is project 3",
-        "tags": ["AI", "python", "database"],
-        "images": [],
+        "title": "MCPedia – Discord Bot",
+        "description": "This Discord bot integrates the Minecraft Wiki (https://minecraft.wiki/) into Discord. It allows users to search any information about Minecraft. It also includes a simple and quick way to preview crafting recipes, calculate the amount of stacks or storage required to store a certain amount of items, and get the UUID of a player. Because fall damage in Minecraft is calculated in a weird way, the bot also includes a command to calculate the fall damage for a given height or says what heights are required to take a certain amount of damage. The bot is written in Python using the py-cord library. Unfortunately, because of lack of free python hosts, it hosted on my laptop, so it cannot be accessible publicly. For now it is only available to my community on our Discord server. The bot is still in development, so more commands will be added in the future. \nThe source code is available on GitHub at https://github.com/malpkakefirek/MCPedia/ \nAt the beginning of development, my friend helped me with a small part of the bot, but everything else was done by me.",
+        "tags": ["python", "OOP", "discord"],
+        "images": ["thumb.webp", "mcpedia_wiki_command.gif", "mcpedia_crafting_command.gif", "mcpedia_calculate_command.png", "mcpedia_uuid_command.png", "mcpedia_fall_command.png"],
         "videos": []
     },
     "3": {
