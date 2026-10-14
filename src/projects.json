@@ -23,37 +23,37 @@
         "videos": []
     },
     "3": {
-        "title": "Project 4",
-        "description": "This is project 4",
-        "tags": ["game-dev", "Unity"],
-        "images": [],
+        "title": "Game Hub – Discord Bot",
+        "description": "This bot is meant to implement many games into Discord chat, to give more fun activities to server members. For now, it only includes Farkle, a dice game where players roll 6 dice and try to score points based on the combinations they roll, but more games are planned when bot hosting is established. In farkle, you can either invite someone specific to play with you or send a public invite for anyone willing to play with you. Farkle has more features planned, such as automatic loss detection and bots you can play against. There is also a scoreboard, but it is not yet fully implemented. \nThe bot is written in Python using the py-cord library. It is hosted on my laptop, so it cannot be accessible publicly. For now it is only available to my community on our Discord server. \nThe source code is available on GitHub at https://github.com/malpkakefirek/GameHub",
+        "tags": ["python", "OOP", "discord"],
+        "images": ["thumb.webp", "game_hub_help.png", "farkle_rules.png", "farkle_invite.png", "farkle_combo.png", "farkle_next_throw.png", "farkle_game_result.png"],
         "videos": []
     },
     "4": {
-        "title": "Project 5",
+        "title": "MechBot – Discord Bot",
         "description": "This is project 5",
-        "tags": ["webdev", "Svelte", "javascript", "PHP"],
+        "tags": ["python", "OOP", "discord"],
         "images": [],
         "videos": []
     },
     "5": {
-        "title": "Project 6",
+        "title": "SmartVent",
         "description": "This is project 6",
-        "tags": ["networking", "c++", "OOP"],
+        "tags": ["hardware", "c++", "webdev"],
         "images": [],
         "videos": []
     },
     "6": {
-        "title": "Project 7",
+        "title": "Schematics Website",
         "description": "This is project 7",
-        "tags": ["AI", "java"],
+        "tags": ["webdev", "PHP"],
         "images": [],
         "videos": []
     },
     "7": {
-        "title": "Project 8",
+        "title": "Sapper Website",
         "description": "This is project 8",
-        "tags": ["database", "PostgreSQL", "Flask"],
+        "tags": ["database", "PostgreSQL", "Svelte", "webdev"],
         "images": [],
         "videos": []
     },
@@ -135,23 +135,37 @@
         "videos": []
     },
     "19": {
-        "title": "Project 20",
+        "title": "Network Connect 4",
         "description": "This is project 20",
-        "tags": ["database", "python"],
+        "tags": ["networking", "c", "game-dev"],
         "images": [],
         "videos": []
     },
     "20": {
-        "title": "Project 21",
+        "title": "Custom Hash Algorithm",
         "description": "This is project 21",
-        "tags": ["game-dev", "Unity", "c++"],
+        "tags": ["python", "OOP"],
         "images": [],
         "videos": []
     },
     "21": {
-        "title": "Project 22",
+        "title": "Custom Cipher",
         "description": "This is project 22",
-        "tags": ["webdev"],
+        "tags": ["python", "OOP"],
+        "images": [],
+        "videos": []
+    },
+    "22": {
+        "title": "Flappy Bird Clone",
+        "description": "This is project 23",
+        "tags": ["webdev", "javascript", "game-dev"],
+        "images": [],
+        "videos": []
+    },
+    "23": {
+        "title": "Snake Clone",
+        "description": "This is project 24",
+        "tags": ["webdev", "PHP", "game-dev"],
         "images": [],
         "videos": []
     }
