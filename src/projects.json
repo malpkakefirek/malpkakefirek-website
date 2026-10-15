@@ -58,18 +58,20 @@
         "videos": []
     },
     "8": {
-        "title": "Project 9",
-        "description": "This is project 9",
-        "tags": ["webdev", "javascript", "PHP"],
-        "images": [],
-        "videos": []
+        "title": "Temperature Visualizer",
+        "description": "A very simple temperature map visualizer, including temperature interpolation. You can input room dimentions and temperature points",
+        "tags": ["python"],
+        "images": ["thumb.webp"],
+        "videos": ["demo.mp4"],
+        "members": 4
     },
     "9": {
-        "title": "Project 10",
-        "description": "This is project 10",
-        "tags": ["networking", "c#", "OOP"],
+        "title": "Bookmaker Database Design",
+        "description": "My friend and I were tasked with designing a comprehensive database for a fictional bookmaker company. We did everything from creating a plan for the database, to designing the database schema, implementing it in PostgreSQL, and finally creating a comprehensive test suite. The database includes tables for users, workers, bets, football clubs, and transactions. The project was completed as part of our university coursework. \nThe design principles can be found at https://docs.google.com/document/d/1Hd51_P9zIsXCqKzrTgrl8YtWTb_ZuTnqI_tibgu1JO0/edit?usp=sharing, the schema at https://docs.google.com/document/d/11M8eWLpypBQkiR6I5RKRsXGbkkHynCH1tCTmbYM6FYM/edit?usp=sharing, and the test suite at https://docs.google.com/document/d/1SiOuQZNdhILpWVutV8NLC7cb32DXIGlvKE0JT2TcvGU/edit?usp=sharing. \nAll the documents in links are only in Polish.",
+        "tags": ["database", "PostgreSQL"],
         "images": [],
-        "videos": []
+        "videos": [],
+        "members": 2
     },
     "10": {
         "title": "Project 11",
