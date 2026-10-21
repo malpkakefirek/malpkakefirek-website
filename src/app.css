@@ -554,6 +554,7 @@ h2 {
   max-height: 200px;
   overflow-y: auto;
   margin-top: 0;
+  scrollbar-color: var(--accent-strong) #00000000;
 }
 .dropdown-collapsed {
   display: none !important;
