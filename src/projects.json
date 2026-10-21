@@ -74,16 +74,17 @@
         "members": 2
     },
     "10": {
-        "title": "Project 11",
-        "description": "This is project 11",
-        "tags": ["AI", "python", "database"],
-        "images": [],
-        "videos": []
+        "title": "School IT Network Design",
+        "description": "This includes researching the devices needed in the network... [TODO] (UST)",
+        "tags": ["networking"],
+        "images": ["building_plan.png", "network_diagram.png"],
+        "videos": [],
+        "members": 3
     },
     "11": {
-        "title": "Project 12",
+        "title": "Air Quality Forecast AI",
         "description": "This is project 12",
-        "tags": ["game-dev", "Unity", "c++"],
+        "tags": ["AI", "python"],
         "images": [],
         "videos": []
     },
