@@ -809,6 +809,11 @@ h2 {
   height: 4rem;
   object-fit: cover;
   transition: opacity 0.2s;
+  border-radius: 0.4rem;
+}
+
+.column:has(.demo):not(:first-child) {
+  padding-left: 0.5rem;
 }
 
 .active,
@@ -816,6 +821,12 @@ h2 {
   opacity: 1;
 }
 
+/* Under the Gallery */
+.project-member-count {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 1rem 0 0.5rem 0;
+}
 
 /* OTHER */
 
