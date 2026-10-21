@@ -13,6 +13,7 @@
   /* Text */
   --text-color: #E7E5EE;
   --text-muted: #A19DB2;
+  --text-accented: #E0D7FF;
 
   /* Purple accent family (the leading color) */
   --accent: #8B5CF6;
@@ -358,7 +359,8 @@ h2 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 0;               /* spacing moves to the cards, see below */
   justify-content: center;
   align-items: stretch;
   padding-bottom: 2rem;
@@ -372,10 +374,11 @@ h2 {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   width: 100%;
   max-width: 22rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-self: center;
+  display: grid;
+  grid-row: span 3;                 /* = number of direct children: title, image, tags */
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  margin-bottom: 2rem;              /* replaces the old row gap */
   padding: 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   align-self: stretch;
@@ -393,7 +396,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.7rem;
-  color: #fff;
+  color: var(--text-accented);
 }
 
 .project-description {
@@ -435,6 +438,7 @@ h2 {
   flex-wrap: wrap;
   gap: 0.5rem;
   align-self: stretch;
+  margin-top: auto;
 }
 
 .tag {
@@ -513,7 +517,7 @@ h2 {
   font-weight: 700;
   padding: 0;
   margin-bottom: 2rem;
-  color: #fff;
+  color: var(--text-accented);
 }
 
 /* Tag selection system */
@@ -857,6 +861,9 @@ footer {
   .article-background {
     width: 49.25rem;
   }
+  .project-title {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -874,9 +881,12 @@ footer {
     width: 100%;
     max-width: 100%;
   }
+  .project-title {
+    font-size: 1.25rem;
+  }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 850px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -916,7 +926,7 @@ footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .project-description {
     font-size: 0.95rem;
   }

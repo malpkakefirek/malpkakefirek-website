@@ -173,7 +173,7 @@ function showProjectPopup(project, key) {
     closeBtn.addEventListener('click', closeProjectPopup);
 
     // Title
-    const title = document.createElement('h2');
+    const title = document.createElement('div');
     title.className = 'project-popup-title';
     title.textContent = project.title;
 
