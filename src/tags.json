@@ -1,59 +1,21 @@
 {
-    "webdev": {
-        "color": "#4CAF50"
-    },
-    "database": {
-        "color": "#2196F3"
-    },
-    "networking": {
-        "color": "#FF9800"
-    },
-    "game-dev": {
-        "color": "#9C27B0"
-    },
-    "OOP": {
-        "color": "#F44336"
-    },
-    "AI": {
-        "color": "#673AB7"
-    },
-    "python": {
-        "color": "#FF5722"
-    },
-    "javascript": {
-        "color": "#3F51B5"
-    },
-    "java": {
-        "color": "#E91E63"
-    },
-    "c++": {
-        "color": "#009688"
-    },
-    "c#": {
-        "color": "#795548"
-    },
-    "c": {
-        "color": "#607D8B"
-    },
-    "Svelte": {
-        "color": "#607D8B"
-    },
-    "PHP": {
-        "color": "#8BC34A"
-    },
-    "Flask": {
-        "color": "#CDDC39"
-    },
-    "PostgreSQL": {
-        "color": "#FFEB3B"
-    },
-    "Unity": {
-        "color": "#00BCD4"
-    },
-    "hardware": {
-        "color": "#FF5722"
-    },
-    "discord": {
-        "color": "#5865F2"
-    }
+    "webdev":     { "color": "#4DD0E1" },
+    "database":   { "color": "#80CBC4" },
+    "networking": { "color": "#FFB74D" },
+    "game-dev":   { "color": "#F48FB1" },
+    "OOP":        { "color": "#FFAB91" },
+    "AI":         { "color": "#B39DFF" },
+    "python":     { "color": "#5BA3E0" },
+    "javascript": { "color": "#F2DB4B" },
+    "java":       { "color": "#E57373" },
+    "c++":        { "color": "#6F86D6" },
+    "c#":         { "color": "#B58AE0" },
+    "c":          { "color": "#A9B7C6" },
+    "Svelte":     { "color": "#FF7A4D" },
+    "PHP":        { "color": "#A39BE0" },
+    "Flask":      { "color": "#C5E1A5" },
+    "PostgreSQL": { "color": "#7FA3C0" },
+    "Unity":      { "color": "#CFD8DC" },
+    "hardware":   { "color": "#81C784" },
+    "discord":    { "color": "#8B94F8" }
 }
