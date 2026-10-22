@@ -12,9 +12,13 @@
 
   <body>
 
-    <canvas id="my-canvas"></canvas>
-    <div class="secret-div">
-      <h1>Hello comrade!</h1>
+    <div id="secret" class="secret-wrapper" onclick="this.classList.remove('active');">
+      <div class="secret-div">
+        <h1>You found the secret!</h1>
+        Congrats, your reward is... satisfaction! Yep, that's it, sorry!
+        <div class="secret-info">You can say the secret code again to speed up the confetti or click anywhere to close :3</div>
+      </div>
+      <canvas id="my-canvas"></canvas>
     </div>
 
     <header class="header">
@@ -44,12 +48,8 @@
         <div class="content-background">
 
           <article>
-            <h2>Lorem ipsum</h2>
-            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar lobortis ipsum sit
-              amet auctor. Phasellus at enim accumsan nulla placerat mattis. Nunc sit amet tristique ipsum, eget hendrerit
-              urna. Integer ornare nibh non tortor aliquet eleifend ac quis tellus. Vestibulum egestas sollicitudin diam
-              interdum rutrum. Nulla a nisi sit amet est interdum elementum sed vitae tortor. Aliquam tristique efficitur
-              nisl pretium posuere.</p>
+            <h2>About Me</h2>
+            <p class="text">My name is <name style="color: var(--text-accented);">Tomasz Czajkowski</name>. I graduated from the AGH University of Science and Technology in Kraków with a Master's degree in Information and Communications Technology (ICT, aka. Teleinformatics) with a GPA of 4.76. I am first and foremost a software developer with a passion for making other people's lives better. I am also a volunteer Community Support member at <a href="https://shockbyte.com/discord" target="_blank">Shockbyte's Discord server</a>, a moderator at <a href="https://freestuffbot.xyz/discord" target="_blank">FreeStuff Bot's Discord server</a>, and a maintainer of <a href="https://github.com/FreeStuffBot/translations/" target="_blank">FreeStuff Bot's translation repository</a>. You can check out my projects in the <a href="portfolio.html">Portfolio</a> section. Some my projects are also on my <a href="https://github.com/Malpkakefirek" target="_blank">GitHub</a>.</p>
           </article>
 
           <article>

@@ -12,9 +12,12 @@
 
   <body>
 
-    <canvas id="my-canvas"></canvas>
-    <div class="secret-div">
-      <h1>Hello comrade!</h1>
+    <div id="secret" class="secret-wrapper" onclick="this.classList.remove('active');">
+      <div class="secret-div">
+        <h1>You found the secret!</h1>
+        Congrats, your reward is... satisfaction! Yep, that's it, sorry!
+      </div>
+      <canvas id="my-canvas"></canvas>
     </div>
 
     <header class="header">

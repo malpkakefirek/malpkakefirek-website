@@ -36,14 +36,20 @@ function createProjectDiv(project, key) {
     title.className = 'project-title';
     title.textContent = project.title;
 
-    const img = document.createElement('img');
-    img.className = 'project-thumbnail';
+    let mediaElement;
     if (Array.isArray(project.images) && project.images.includes("thumb.webp")) {
-        img.src = `media/projects/${key}/thumb.webp`;
+        mediaElement = document.createElement('img');
+        mediaElement.className = 'project-thumbnail';
+        mediaElement.src = `media/projects/${key}/thumb.webp`;
+        mediaElement.alt = project.title;
     } else {
-        img.src = 'media/projects/missing.png';
+        mediaElement = document.createElement('p');
+        mediaElement.className = 'project-short-description';
+        const description = project.description || '';
+        mediaElement.textContent = description.length > 256 
+            ? description.substring(0, 253) + '…' 
+            : description;
     }
-    img.alt = project.title;
 
     const tagsDiv = document.createElement('div');
     tagsDiv.className = 'project-tags';
@@ -57,7 +63,7 @@ function createProjectDiv(project, key) {
     }
 
     div.appendChild(title);
-    div.appendChild(img);
+    div.appendChild(mediaElement);
     div.appendChild(tagsDiv);
 
     // Add click event to show popup

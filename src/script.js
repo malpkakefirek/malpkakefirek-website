@@ -1,7 +1,7 @@
 const header = document.querySelector('.header')
 const main = document.querySelector('main')
 const footer = document.querySelector('footer')
-const secretDiv = document.querySelector('.secret-div')
+const secretWrapper = document.querySelector('#secret')
 
 const keysPressed = []
 const secretCode = ['h', 'a', 'c', 'k']
@@ -22,18 +22,20 @@ function keysDetector(e) {
   
   if (JSON.stringify(keysPressed) == JSON.stringify(secretCode)) {
     
-    secretDiv.style.display = 'block'
-    header.style.display = 'none'
-    main.style.display = 'none'
-    footer.style.display = 'none'
+    secretWrapper.classList.add('active')
+    // secretWrapper.style.display = 'block'  
+    console.log("Secret code detected!")
+    // header.style.display = 'none'
+    // main.style.display = 'none'
+    // footer.style.display = 'none'
     
     confetti.render()
-    anime({
-      targets: 'body',
-      rotate: '1turn',
-      backgroundColor: '#fcba03',
-      duration: 2000,
-    })
+    // anime({
+    //   targets: 'body',
+    //   rotate: '1turn',
+    //   backgroundColor: '#fcba03',
+    //   duration: 2000,
+    // })
 
   }
 }
