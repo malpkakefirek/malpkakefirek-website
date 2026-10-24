@@ -75,18 +75,19 @@
     },
     "10": {
         "title": "School IT Network Design",
-        "description": "This includes researching the devices needed in the network... [TODO] (UST)",
+        "description": "Me and two of my friends were tasked with designing a comprehensive network for a ficticious school. The project included researching the ideal devices needed in the network, based on speed, max amount of concurrent users, price, energy consumption, operating temperatures, and other factors. We also designed the network topology, including the proper cabling and calculating all the prices, including the price of electricity. The final plan costs 12-15.5k PLN + 2k PLN per year for electricity and Librus subscription. All the images are in Polish.",
         "tags": ["networking"],
-        "images": ["building_plan.png", "network_diagram.png"],
+        "images": ["building_plan.png", "finished_plan.png", "network_diagram.png"],
         "videos": [],
         "members": 3
     },
     "11": {
         "title": "Air Quality Forecast AI",
-        "description": "This is project 12",
+        "description": "The aim of this project was to train a network to predict a certain parameter based on time series analysis. Me and my friend used a dataset of air quality measurements from AGH's meteorological station. The dataset included measurements of PM10, Air Pressure, Temperature, Humidity, Rainfall Intensity, and Wind Speed. We implemented a Random Forest (RF) model and a Long Short-Term Memory (LSTM) model. The RF model was implemented using the scikit-learn library, while the LSTM model was implemented using the TensorFlow library. We used the models to predict future PM10 values based on all of the parameters. We also implemented an ARIMA model and compared all of their performance was evaluated using metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). The results showed that ARIMA is not sufficient for this task, while RF and LSTM models performed decently. Unfortunately, the amount of data was not sufficient to train the models properly, so the results were not very accurate and the differences between RF and LSTM were insignificant. The lack of data was addressed later as part of my engineering thesis, where I implemented a more complex model and used a large dataset from Airly. \nThe source code is available on Colab at https://colab.research.google.com/drive/1gyvL_WkEVrbUbt-jeGi_YNN3OO5TGmyE?usp=sharing",
         "tags": ["AI", "python"],
         "images": [],
-        "videos": []
+        "videos": [],
+        "members": 2
     },
     "12": {
         "title": "Project 13",
