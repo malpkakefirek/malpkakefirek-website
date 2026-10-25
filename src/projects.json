@@ -31,17 +31,18 @@
     },
     "4": {
         "title": "MechBot – Discord Bot",
-        "description": "This is project 5",
+        "description": "This is a community-centered bot, that provides social features to Discord servers. It includes a leveling system, where users can gain experience points by chatting in the server. It also includes a currency system, where users can earn coins by chatting or inviting others and use them to buy items from the shop, such as custom roles. The bot is written in Python using the py-cord library. The bot is directed specifically to the needs of my community, so it is not available publicly. \nThe source code is available on GitHub at https://github.com/malpkakefirek/MechBot",
         "tags": ["python", "OOP", "discord"],
-        "images": [],
+        "images": ["thumb.webp"],
         "videos": []
     },
     "5": {
         "title": "SmartVent",
-        "description": "This is project 6",
+        "description": "SmartVent is a device that automatically opens and closes your window depending on the temperature, noise level, the air quality index, and the time of day. It allows the user to set the time, temperature, noise, and air quality thresholds. The user can also disable each threshold completely if needed and can manually override the window to be open or closed, either for a specified period of time or indefinitely until manually changed. User can connect remotely to the device via a web application to change any settings and preview the status and values. I was responsible for the hardware design and connecting every component to the raspberry Pi, as well as the backend of the web application. Collaboration was done using GitHub and Discord. Because of the short deadline of the project, it required intense collaboration and communication. To speed things up, my friend and I took on additional responsibilities to ensure the project's success, while some project members were lacking in contributions. The repository is available at https://github.com/jd-kowal/IoT---SmartVent",
         "tags": ["hardware", "c++", "webdev"],
-        "images": [],
-        "videos": []
+        "images": ["thumb.webp", "prototype_front.jpg", "prototype_back.jpg", "user_login.jpeg", "main_page.png", "manual_override.png", "settings.png"],
+        "videos": [],
+        "members": 7
     },
     "6": {
         "title": "Schematics Website",
@@ -52,14 +53,15 @@
     },
     "7": {
         "title": "Sapper Website",
-        "description": "This is project 8",
-        "tags": ["database", "PostgreSQL", "Svelte", "webdev"],
-        "images": [],
-        "videos": []
+        "description": "A fully functioning Minesweeper game implemented in Svelte with a Python backend. The game includes a shop with custom skins, boosters, xp system, battle pass, and friend system. The game system is designed to be fully asynchronous, so multiple players can play at the same time without any issues and game data is stored in a PostgreSQL database, so there is no risk of losing progress. I was mainly responsible for the backend and database design, while my friend was responsible for the frontend (don't blame me for the bad UI design). Because of the short deadline of the project and no prior experience with Svelte, I had to help with the frontend as well. The website is hosted on free hosting, therefore the dataset is also separated from the API server, so the latency is a lot higher than expected and sometimes the website may not work as expected. The website is publically available at https://sapper-zeta.vercel.app/ with the backend source code available at https://github.com/Malpkakefirek/SapperApi and the frontend source code available at https://github.com/Malpkakefirek/Sapper",
+        "tags": ["database", "PostgreSQL", "Svelte", "webdev", "python"],
+        "images": ["thumb.webp", "register.png", "game_settings.png", "large_game.png", "large_game_loss.png", "impossible_difficulty.png", "skins.png", "battle_pass.png", "booster.png", "friend_page.png", "user_profile.png", "password_change.png", "main_menu_diagram.png", "game_menu_diagram.png", "shop_menu_diagram.png", "friends_menu_diagram.png", "settings_menu_diagram.png"],
+        "videos": [],
+        "members": 2
     },
     "8": {
         "title": "Temperature Visualizer",
-        "description": "A very simple temperature map visualizer, including temperature interpolation. You can input room dimentions and temperature points",
+        "description": "A very simple temperature map visualizer, including temperature interpolation. You can input room dimensions and temperature values at some points in the room, and the program will generate a 3D temperature map of the room. The program is written in Python using Matplotlib for plotting. The interpolation is done using the scipy library.",
         "tags": ["python"],
         "images": ["thumb.webp"],
         "videos": ["demo.mp4"],
