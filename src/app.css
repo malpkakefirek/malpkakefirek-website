@@ -22,6 +22,13 @@
   --accent-gradient: linear-gradient(135deg, #8B5CF6 0%, #6D3FE0 100%);
   --glow-color: rgba(139, 92, 246, 0.45);
 
+  /* Skills */
+  --star-on: var(--accent-soft);
+  --star-off: rgba(128, 128, 128, 0.35);
+  --border: rgba(128, 128, 128, 0.25);
+  --chip-bg: rgba(79, 109, 245, 0.1);
+  --chip-fg: inherit;
+
   /* Navigation */
   --nav-color: rgba(255, 255, 255, 0.06);
   --nav-text-color: #E7E5EE;
@@ -304,6 +311,110 @@ h2 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Skills */
+.skills {
+  --radius: 12px;
+  max-width: 860px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.skills h3 {
+  margin: 0 0 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.skills-group {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ---------- Rated lists ---------- */
+.rated-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.35rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rated-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.rating {
+  flex-shrink: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+.rating .on  {
+  background: linear-gradient(0deg, var(--accent) 0%, var(--accent-soft) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.rating .off { color: var(--star-off); }
+
+/* ---------- Languages ---------- */
+.languages li {
+  flex-wrap: wrap;
+}
+.lang-name {
+  font-weight: 600;
+}
+.lang-level {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ---------- Tech stack ---------- */
+.stack {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.9rem 1.5rem;
+  margin: 0;
+  align-items: start;
+}
+.stack dt {
+  font-weight: 600;
+  padding-top: 0.25rem;
+}
+.stack dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+}
+.chip {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-fg);
+  font-size: 0.9rem;
+}
+.chip small {
+  opacity: 0.7;
+}
+
+@media (max-width: 560px) {
+  .stack { grid-template-columns: 1fr; gap: 0.4rem; }
+  .stack dd { margin-bottom: 0.8rem; }
 }
 
 .map {
