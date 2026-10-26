@@ -2,7 +2,7 @@
     "0": {
         "title": "Discern – Unity Game",
         "description": "Move in a 3D first-person environment and patrol rooms for unpredictable changes. Anomalies will show up periodically, so keep your eye out. Use your tablet to select the affected room and identify the correct anomaly category from 8 different types. Accurate reports will trigger a remote neutralization sequence. If you're not observant enough, anomalies will take over the area and lead to dire consequences.\n\nThe game is in a very early stage of development. Tutorial needs a rework and more maps are to be made, including new mechanics and anomaly types. The current build is playable and can be downloaded from https://tigerxplso.itch.io/discern",
-        "tags": ["game-dev", "Unity", "C#"],
+        "tags": ["game-dev", "Unity", "C#", "OOP"],
         "images": ["thumb.webp", "reporting.gif", "anomalies.gif", "bathroom.png", "office.png", "table.png", "scenery.png", "menu.png"],
         "videos": [],
         "members": 2
@@ -46,10 +46,27 @@
     },
     "6": {
         "title": "Schematics Website",
-        "description": "This is project 7",
+        "description": "This is the first iteration of a website that allows users to upload and download Minecraft build/redstone schematics, resource packs, and mods. The website is written in PHP with a PostgreSQL database. Because the website was hosted on student hosting provided by the university, it is no longer available. I collaborated with my friend on the frontend, backend, and database design. Unfortunately one member of our team didn't put in as much effort and provided lackluster contributions, that had to be re-written anyways, due to their poor quality. The website was designed to integrate well with the Minecraft graphic design and to be very user-friendly for dedicated Minecraft players. In a later project, we redesigned the website and focused on schematics. The source code for this website is available on GitHub at https://github.com/malpkakefirek/ProjektWWW-Schematics. The coding was done on university's architecture, so commit history does not reflect the actual development process.",
         "tags": ["webdev", "PHP"],
-        "images": [],
-        "videos": []
+        "images": [
+            "thumb.webp",
+            "main_page.png",
+            "schematics_page.png",
+            "schematics_3Dview.png",
+            "redstone_phone_view.png",
+            "redstone_phone_view_menu.png",
+            "redstone_3Dview.png",
+            "resourcepacks_page.png",
+            "resourcepacks_details_page.png",
+            "mods_page.png",
+            "mods_side_page.png",
+            "upload_schematic.png",
+            "upload_too_big_file.png",
+            "login_page.png",
+            "register_page.png"
+        ],
+        "videos": [],
+        "members": 3
     },
     "7": {
         "title": "Sapper Website",
@@ -92,85 +109,60 @@
         "members": 2
     },
     "12": {
-        "title": "Project 13",
-        "description": "This is project 13",
-        "tags": ["webdev", "Svelte"],
-        "images": [],
-        "videos": []
+        "title": "Schematics Website Redesign",
+        "description": "This is a redesign of the Schematics Website project. This project focused solely on the UI/UX side of things, so no functioning website was made. It involved creating a new design centered around user experience, requiring a lot of reasearch of existing products, design principles, and user testing and feedback. \nThe first step was to research existing products and analyze their strengths and weaknesses. The wesbites we looked at were: minecraft-schematics.com, planetminecraft.com, mcbuild.org, abfielder.com, schemat.io, and schematicmc.com. We also looked at minecraft.wiki and minecraft.net for design inspiration. After analyzing the websites, we wrote down our strategy, including every important aspect of the new design. Then, we created a google form to gather user needs and their current experience with existing products. After analyzing the results from 16 respondents, we created a user persona. Combining it with our strategy goals, we created a new design for the website, making sure to adhere to WCAG AAA standards. The design was then tested by 7 different users, that normally use existing products, with one of them also responding to the initial survey. The final design was then presented to our professor and received positive feedback. \nThe design was created using the mobile-first design principle. The prototype was created using Figma, where unfortunately the font and some other assets are not how they would be in the final product.",
+        "tags": ["webdev"],
+        "images": [
+            "thumb.webp",
+            "about_us.png",
+            "builds_page.png",
+            "redstone_page.png",
+            "schematic_details_page.png",
+            "3D_preview.png",
+            "user_persona.png",
+            "WCAG_contrasts.png"
+        ],
+        "videos": [],
+        "members": 2
     },
     "13": {
-        "title": "Project 14",
-        "description": "This is project 14",
-        "tags": ["database", "PostgreSQL", "Flask", "python"],
+        "title": "Prorokus II – Adventure Map",
+        "description": "This is project 18",
+        "tags": ["game-dev"],
         "images": [],
         "videos": []
     },
     "14": {
-        "title": "Project 15",
-        "description": "This is project 15",
-        "tags": ["webdev"],
+        "title": "Minecraft Builds",
+        "description": "This is project 19",
+        "tags": ["game-dev"],
         "images": [],
         "videos": []
     },
     "15": {
-        "title": "Project 16",
-        "description": "This is project 16",
-        "tags": ["game-dev", "Unity"],
-        "images": [],
-        "videos": []
-    },
-    "16": {
-        "title": "Project 17",
-        "description": "This is project 17",
-        "tags": ["networking", "c#", "OOP"],
-        "images": [],
-        "videos": []
-    },
-    "17": {
-        "title": "Project 18",
-        "description": "This is project 18",
-        "tags": ["AI", "java"],
-        "images": [],
-        "videos": []
-    },
-    "18": {
-        "title": "Project 19",
-        "description": "This is project 19",
-        "tags": ["webdev", "javascript", "OOP"],
-        "images": [],
-        "videos": []
-    },
-    "19": {
         "title": "Network Connect 4",
         "description": "This is project 20",
         "tags": ["networking", "c", "game-dev"],
         "images": [],
         "videos": []
     },
-    "20": {
-        "title": "Custom Hash Algorithm",
-        "description": "This is project 21",
-        "tags": ["python", "OOP"],
-        "images": [],
-        "videos": []
-    },
-    "21": {
+    "16": {
         "title": "Custom Cipher",
-        "description": "This is project 22",
-        "tags": ["python", "OOP"],
+        "description": "This is a cipher created by me. It's based on Vigenere cipher, but with a twist. It also scrambles the alphabet based on the key, which means the key itself also changes based on the key itself. The length of the message also changes depending on the key. It adds as many characters as there are in the key in places of the index of the key characters. But it adds letters based on the scrambled alphabet, so you can't guess the key even if you knew which characters are being added. The biggest flaws with this cipher are statistical analysis and PEBKAC with short keys. \nThe source code is available on GitHub at https://github.com/malpkakefirek/malpka-cipher",
+        "tags": ["python"],
         "images": [],
         "videos": []
     },
-    "22": {
+    "17": {
         "title": "Flappy Bird Clone",
-        "description": "This is project 23",
+        "description": "This is project 18",
         "tags": ["webdev", "javascript", "game-dev"],
         "images": [],
         "videos": []
     },
-    "23": {
+    "18": {
         "title": "Snake Clone",
-        "description": "This is project 24",
+        "description": "This is project 19",
         "tags": ["webdev", "PHP", "game-dev"],
         "images": [],
         "videos": []
