@@ -208,8 +208,8 @@ function showProjectPopup(project, key) {
 
     // Media (images & videos)
     let mediaDiv;
+    project.images = (project.images || []).filter(imageName => imageName !== 'thumb.webp');
     if ((project.images && project.images.length > 0) || (project.videos && project.videos.length > 0)) {
-        project.images = (project.images || []).filter(imageName => imageName !== 'thumb.webp');
         
         mediaDiv = document.createElement('div');
         mediaDiv.className = 'project-media';
