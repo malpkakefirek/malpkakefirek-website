@@ -200,5 +200,13 @@
         "tags": ["javascript", "game-dev"],
         "images": [],
         "videos": []
+    },
+    "19": {
+        "title": "Speech Recognition App",
+        "description": "This project provides a speech-to-text API backend using OpenAI's Whisper model provided by faster_whisper for transcribing speech to text. The backend receives speech from a mobile application, processes it, and returns the transcribed text.\n\nFeatures:\n- OpenAI Whisper Integration: Leveraging Whisper's advanced speech-to-text capabilities.\n- Mobile Application: The mobile app sends audio data to the backend for transcription.\n- RESTful API: Exposes endpoints to handle audio input and return transcribed text.\n\nTechnology Stack:\n- Backend: Flask-based API using OpenAI Whisper from faster_whisper for speech recognition.\n- Mobile Frontend: Kotlin app developed to capture and send speech data.\n- API: RESTful API facilitating the communication between mobile frontend and the backend.\n\nAvailable at https://github.com/LukasSeratowicz/Speech-to-Text-with-OpenAI-Whisper-API-Backend-and-Mobile-Integration",
+        "tags": ["python", "mobile-dev", "AI"],
+        "images": [],
+        "videos": [],
+        "members": 2
     }
 }
