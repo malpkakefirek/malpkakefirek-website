@@ -449,6 +449,7 @@ h2 {
   padding-bottom: 1.5rem;
   font-size: 1.15rem;
   color: var(--text-color);
+  white-space: pre-line;
 }
 
 .article-images {
