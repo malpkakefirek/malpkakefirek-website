@@ -983,6 +983,85 @@ h2 {
   margin: 1rem 0 0.5rem 0;
 }
 
+
+/* CONTACT PAGE */
+.contact-email,
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--main-background-color);
+  border: 1px solid var(--article-border-color);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-email {
+  margin-bottom: 2rem;
+  max-width: 28rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(109, 63, 224, 0.06));
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.contact-email:hover,
+.social-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 26px var(--glow-color);
+}
+
+.contact-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+  background: var(--accent-gradient);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+}
+
+.contact-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-label {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact-kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.contact-value {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-bottom: 1.75rem;
+}
+
+
 /* OTHER */
 
 /* Slim dark scrollbars for the whole page */
@@ -1084,5 +1163,11 @@ footer {
   .project-grid {
     grid-template-columns: 1fr;
     gap: 0.7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .social-grid {
+    grid-template-columns: 1fr;
   }
 }
