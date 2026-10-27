@@ -316,7 +316,6 @@ h2 {
 /* Skills */
 .skills {
   --radius: 12px;
-  max-width: 860px;
   margin: 0 auto;
   line-height: 1.5;
 }
