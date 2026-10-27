@@ -551,6 +551,7 @@ h2 {
   font-size: 0.8rem;
   margin-bottom: 1.2rem;
   color: var(--text-muted);
+  line-break: anywhere;
 }
 
 /* .project-links {
@@ -1090,9 +1091,18 @@ footer {
 }
 
 @media (max-width: 1240px) {
+  .project-item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
   article,
   .article-background {
-    width: 49.25rem;
+    width: 100%;
+    max-width: 100%;
   }
   .project-title {
     font-size: 1.25rem;
@@ -1103,10 +1113,9 @@ footer {
   .project-item {
     width: 100%;
     max-width: 100%;
-    /* padding: 1rem; */
   }
   .project-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
   article,

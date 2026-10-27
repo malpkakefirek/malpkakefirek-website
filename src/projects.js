@@ -280,35 +280,6 @@ function showProjectPopup(project, key) {
         mediaDiv.innerHTML = `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" type="text/html" src="https://www.youtube.com/embed/${project.embed}" frameborder="0"></iframe>`
     }
 
-
-
-
-    // Use images and videos from the project object if available
-    // if (Array.isArray(project.images)) {
-    //     project.images.forEach(imageName => {
-    //         const img = new Image();
-    //         img.src = `media/projects/${key}/${imageName}`;
-    //         img.alt = project.title;
-    //         img.style.maxWidth = '200px';
-    //         img.style.maxHeight = '150px';
-    //         img.style.objectFit = 'cover';
-    //         img.onerror = function() { this.style.display = 'none'; };
-    //         mediaDiv.appendChild(img);
-    //     });
-    // }
-
-    // if (Array.isArray(project.videos)) {
-    //     project.videos.forEach(videoName => {
-    //         const video = document.createElement('video');
-    //         video.src = `media/projects/${key}/${videoName}`;
-    //         video.controls = true;
-    //         video.style.maxWidth = '200px';
-    //         video.style.maxHeight = '150px';
-    //         video.onerror = function() { this.remove(); };
-    //         mediaDiv.appendChild(video);
-    //     });
-    // }
-
     popup.appendChild(closeBtn);
     popup.appendChild(title);
     popup.appendChild(desc);
