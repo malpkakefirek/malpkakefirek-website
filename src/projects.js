@@ -260,6 +260,10 @@ function showProjectPopup(project, key) {
                 </div>`).join('') : ''}
             </div>
         `;
+    } else if (project.embed) {
+        mediaDiv = document.createElement('div');
+        mediaDiv.className = 'project-embed';
+        mediaDiv.innerHTML = `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" type="text/html" src="https://www.youtube.com/embed/${project.embed}" frameborder="0"></iframe>`
     }
 
 
