@@ -168,6 +168,11 @@ function renderProjects(projects, tags, page) {
 // --- Popup logic ---
 let slideIndex;
 
+function linkify(text) {
+    const urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+}
+
 function showProjectPopup(project, key) {
     // Remove existing popup if any
     closeProjectPopup();
@@ -195,7 +200,7 @@ function showProjectPopup(project, key) {
     // Description
     const desc = document.createElement('p');
     desc.className = 'project-description';
-    desc.textContent = project.description || 'No description provided :/';
+    desc.innerHTML = linkify(project.description || 'No description provided :/');
 
     // Member count
     const memberCount = document.createElement('p');
