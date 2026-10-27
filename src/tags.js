@@ -36,6 +36,8 @@ function renderDropdown() {
             li.textContent = tag;
             li.className = tagClass(tag);
             li.tabIndex = 0;
+            li.setAttribute('role', 'button');
+            li.setAttribute('aria-label', `Select tag: ${tag}`);
             li.addEventListener('click', (e) => {
                 e.stopPropagation(); // Prevent dropdown from closing
                 selectedTags.push(tag);
