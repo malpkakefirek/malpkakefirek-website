@@ -31,6 +31,7 @@ function filterProjectsByTags(projects, tags) {
 function createProjectDiv(project, key) {
     const div = document.createElement('div');
     div.className = 'project-item';
+    div.tabIndex = 0; // Make it focusable for keyboard events
 
     const title = document.createElement('h3');
     title.className = 'project-title';
@@ -68,6 +69,13 @@ function createProjectDiv(project, key) {
 
     // Add click event to show popup
     div.addEventListener('click', () => showProjectPopup(project, key));
+    // Add keydown event to show popup on Enter or Space
+    div.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(); // Prevent scrolling for Space
+            showProjectPopup(project, key);
+        }
+    });
 
     return div;
 }
@@ -171,6 +179,7 @@ function showProjectPopup(project, key) {
     // Popup container
     const popup = document.createElement('div');
     popup.className = 'project-popup';
+    popup.tabIndex = 0; // Make it focusable for keyboard events
 
     // Close button
     const closeBtn = document.createElement('button');
@@ -318,6 +327,22 @@ function showProjectPopup(project, key) {
             closeProjectPopup();
         }
     });
+
+    popup.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            closeProjectPopup();
+        }
+
+        if (e.key === 'ArrowLeft') {
+            plusSlides(-1);
+        }
+
+        if (e.key === 'ArrowRight') {
+            plusSlides(1);
+        }
+    });
+
+    popup.focus();
 }
 
 // Next/previous controls

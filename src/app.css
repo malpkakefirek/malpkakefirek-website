@@ -243,7 +243,7 @@ article,
   transition: all 200ms linear;
 }
 
-.nav-list-item:hover {
+.nav-list-item:hover, .nav-list-item:focus {
   background: var(--nav-hover-color);
   color: var(--nav-text-hover-color);
   cursor: pointer;
@@ -525,10 +525,11 @@ h2 {
   box-sizing: border-box;
 }
 
-.project-item:hover {
+.project-item:hover, .project-item:focus {
   transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow: 0 10px 30px 0 var(--glow-color);
+  outline: none;
 }
 
 .project-title {
@@ -627,6 +628,9 @@ h2 {
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+}
+.project-popup:focus {
+  outline: none;
 }
 
 .popup-close-btn {

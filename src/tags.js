@@ -42,6 +42,14 @@ function renderDropdown() {
                 updateSelectedTags(false);
                 renderDropdown();
             });
+            li.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selectedTags.push(tag);
+                    updateSelectedTags(false);
+                    renderDropdown();
+                }
+            });
             dropdown.appendChild(li);
         }
     });
