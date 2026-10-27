@@ -131,7 +131,8 @@
         "tags": ["game-dev"],
         "images": ["thumb.webp"],
         "videos": [],
-        "embed": "IlsxQQmtjEU"
+        "embed": "IlsxQQmtjEU",
+        "members": 4
     },
     "14": {
         "title": "Minecraft Builds",
@@ -169,7 +170,8 @@
             "castle_waiting_room_(S2).png",
             "castle_business_meeting_room_(S2).png"
         ],
-        "videos": []
+        "videos": [],
+        "members": 2
     },
     "15": {
         "title": "Network Connect 4",
