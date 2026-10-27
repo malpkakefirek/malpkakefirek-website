@@ -127,21 +127,52 @@
     },
     "13": {
         "title": "Prorokus II – Adventure Map",
-        "description": "This is project 18",
+        "description": "This project is in progress. It is a Minecraft adventure map where choices matter. You can view a climatic trailer for the map at https://www.youtube.com/watch?v=IlsxQQmtjEU. \nThe map visible in the trailer is the prologue of the map, which isn't a part of the actual map.",
         "tags": ["game-dev"],
-        "images": [],
+        "images": ["thumb.webp"],
         "videos": []
     },
     "14": {
         "title": "Minecraft Builds",
-        "description": "This is project 19",
+        "description": "This is not strictly related to game development, but it is somewhat related to world building. This is a collection of many of my Minecraft builds, from various servers over the years. All of them were built in survival mode, with original designs, never taken from the internet. Some of them were designed in creative mode before being build in survival, while others were built in survival with only a vague idea of what I want to build. If anything on the image was not designed by myself, it will be marked as such. \nThe builds marked as \"S1\" were an allegedly abandoned house, that actually spies on a nearby military base. Unfortunately there wasn't enough time in the season to finish the builds. \nIn \"S2\" I collaborated with my friend to build a castle on an island, with a city, farmlands, and a winery. All the interiors and details visible in the images were built by me, while the exteriors were mostly build by my friend. The inner-city contains a weaponsmith (with a shop), tannery, honey shop, canals, port, and other miscelaneous shops and buildings. Unfortunately we didn't have enough time to furnish every single building in the city. To the north of the city, there is a farm with a windmill and a barn, as well as a nice forest park (I don't have screenshots of the park, but the farm screenshot is taken from there). A path to the east from the city leads to the castle and further east to a winery. The castle has a throne room, royal quarters, library, planning room, kitchen, staff quarters, military strategy planning room, armory, and a business meeting room along with a waiting room on the top tower. \nSome planning was required to make sure everything is connected and has a purpose. The final product looks like a real lived-in city. The details really bring life to the builds.",
         "tags": ["game-dev"],
-        "images": [],
+        "images": [
+            "thumb.webp",
+            "abandoned_house_1_(S1).png",
+            "abandoned_house_2_(S1).png",
+            "custom_cliff_terrain_(S1).png",
+            "military_complex_(S1)_-_vehicle_not_mine.png",
+            "military_complex_(S1)_-_vehicles_not_mine.png",
+            "military_complex_inside_(S1)_-_vehicles_not_mine.png",
+            "winery_panorama_(S2).png",
+            "winery_inside_(S2).png",
+            "port_(S2).png",
+            "farms_(S2).png",
+            "castle_city_panorama_(S2).png",
+            "honey_store_(S2).png",
+            "honey_store_inside_1_(S2).png",
+            "honey_store_inside_2_(S2).png",
+            "weapon_store_(S2).png",
+            "weapon_store_inside_(S2).png",
+            "tannery_1_(S2).png",
+            "tannery_2_(S2).png",
+            "castle_throne_room_1_(S2).png",
+            "castle_throne_room_2_(S2).png",
+            "castle_queen_bedroom_(S2).png",
+            "castle_grand_hallway_(S2).png",
+            "castle_planning_room_1_(S2).png",
+            "castle_planning_room_2_(S2).png",
+            "castle_strategy_room_1_(S2).png",
+            "castle_strategy_room_2_(S2).png",
+            "castle_armory_(S2).png",
+            "castle_waiting_room_(S2).png",
+            "castle_business_meeting_room_(S2).png"
+        ],
         "videos": []
     },
     "15": {
         "title": "Network Connect 4",
-        "description": "This is project 20",
+        "description": "A simple terminal connect 4 game, that allows two players to play against each other over a network. It was made in C and uses sockets for communication between players. One player acts as a server host and the other connects to it. The game is played in the terminal and uses ASCII characters to display the game board. I made sure to beautify the display to be as legible as possible. Code is available on GitHub at https://github.com/malpkakefirek/Connect4",
         "tags": ["networking", "c", "game-dev"],
         "images": [],
         "videos": []
@@ -155,15 +186,15 @@
     },
     "17": {
         "title": "Flappy Bird Clone",
-        "description": "This is project 18",
-        "tags": ["webdev", "javascript", "game-dev"],
+        "description": "A very simple Flappy Bird clone made in Kaboom.js. You can play it at https://malpkakefirek.github.io/Flabby-Bird/ and the source code is at https://github.com/malpkakefirek/Flabby-Bird",
+        "tags": ["javascript", "game-dev"],
         "images": [],
         "videos": []
     },
     "18": {
         "title": "Snake Clone",
-        "description": "This is project 19",
-        "tags": ["webdev", "PHP", "game-dev"],
+        "description": "A very simple Snake clone made in Kaboom.js. You can play it at https://malpkakefirek.github.io/Snek/ and the source code is at https://github.com/malpkakefirek/Snek",
+        "tags": ["javascript", "game-dev"],
         "images": [],
         "videos": []
     }
