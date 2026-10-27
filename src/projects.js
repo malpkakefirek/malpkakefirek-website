@@ -309,7 +309,7 @@ function showProjectPopup(project, key) {
 
     if (mediaDiv) {
         slideIndex = 1;
-        showSlides(slideIndex);
+        showSlides(slideIndex, firstLoad = true);
     }
 
     // Close popup when clicking outside the popup area
@@ -330,7 +330,7 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n, firstLoad = false) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("demo");
@@ -357,7 +357,7 @@ function showSlides(n) {
     const activeThumbnail = document.querySelectorAll('.demo')[slideIndex - 1]; 
 
     // Scroll it into the center of the view
-    if (activeThumbnail) {
+    if (activeThumbnail && !firstLoad) {
         activeThumbnail.scrollIntoView({ 
             behavior: 'smooth', 
             block: 'nearest', 
